@@ -9,6 +9,7 @@ namespace ToDoList.Categories.Tests
     public class CategoryTest
     {
 
+        // Test One
         [TestMethod]
         public void CategoryConstructor_CreatesInstanceOfCategory_Category()
         {
