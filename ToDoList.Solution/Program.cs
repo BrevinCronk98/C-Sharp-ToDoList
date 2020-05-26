@@ -1,7 +1,8 @@
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
+using MySql.Data.MySqlClient;
 
-namespace Dealership.Models
+namespace ToDoList.Models
 {
     public class Program
     {
