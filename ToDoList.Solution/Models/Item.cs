@@ -5,8 +5,8 @@ namespace ToDoList.Models
 {
   public class Item
   {
+    public int ItemId { get; set; }
     public string Description { get; set; }
-    public int Id { get; set; }
 
     public Item(string description)
     {
@@ -75,9 +75,10 @@ namespace ToDoList.Models
     {
       MySqlConnection conn = DB.Connection();
       conn.Open();
-      var cmd = conn.CreateCommand() as MySqlCommand;
       
+      var cmd = conn.CreateCommand() as MySqlCommand;
       cmd.CommandText = @"SELECT * FROM `items` WHERE id = @thisId;";
+      
       MySqlParameter thisId = new MySqlParameter();
       thisId.ParameterName = "@thisId";
       thisId.Value = id;
