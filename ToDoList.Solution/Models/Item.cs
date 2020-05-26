@@ -75,16 +75,18 @@ namespace ToDoList.Models
     {
       MySqlConnection conn = DB.Connection();
       conn.Open();
-
       var cmd = conn.CreateCommand() as MySqlCommand;
+      
       cmd.CommandText = @"SELECT * FROM `items` WHERE id = @thisId;";
       MySqlParameter thisId = new MySqlParameter();
       thisId.ParameterName = "@thisId";
       thisId.Value = id;
       cmd.Parameters.Add(thisId);
+      
       var rdr = cmd.ExecuteReader() as MySqlDataReader;
       int itemId = 0;
       string itemDescription = "";
+      
       while (rdr.Read())
       {
         itemId = rdr.GetInt32(0);
@@ -99,14 +101,14 @@ namespace ToDoList.Models
       return foundItem;
     }
 
+    
     public void Save()
     {
       MySqlConnection conn = DB.Connection();
       conn.Open();
       var cmd = conn.CreateCommand() as MySqlCommand;
 
-      // Begin new code
-
+     
       cmd.CommandText = @"INSERT INTO items (description) VALUES (@ItemDescription);";
       MySqlParameter description = new MySqlParameter();
       description.ParameterName = "@ItemDescription";
@@ -115,7 +117,7 @@ namespace ToDoList.Models
       cmd.ExecuteNonQuery();
       Id = (int)cmd.LastInsertedId;
 
-      // End new code
+      
 
       conn.Close();
       if (conn != null)
