@@ -16,7 +16,7 @@ namespace ToDoList
     {
       var builder = new ConfigurationBuilder()
           .SetBasePath(env.ContentRootPath)
-          .AddJsonFile("appsetting.json");
+          .AddJsonFile("appsettings.json");
       Configuration = builder.Build();
     }
 
