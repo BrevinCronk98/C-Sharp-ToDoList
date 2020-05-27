@@ -6,7 +6,8 @@
 
 @using ToDoList.Models;
 
-<h1>To Do List</h1>
+<h1>Welcome to the To Do List!!!!</h1>
+<p>@Html.ActionLink("See all items", "Index", "Items")
 
   @if (Model.Count == 0)
   {

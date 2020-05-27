@@ -19,7 +19,7 @@ namespace ToDoList.Items.Tests
 
          public ItemTest()
         {
-            DBConfiguration.ConnectionString = "server=localhost;user id=root;password=bC2009053?!Bc?!;port=3306;database=to_do_list_test;";
+            DBConfiguration.ConnectionString = "server=localhost;user id=root;password=Bc2009053;port=3306;database=to_do_list_test;";
         }
 
         // Test One
