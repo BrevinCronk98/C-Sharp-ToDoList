@@ -35,8 +35,24 @@ namespace ToDoList.Controllers
 
     public ActionResult Edit(int id)
     {
-      var thisItem = _db.Items.FirstOrDefault(items => items.ItemId == id)
+      var thisItem = _db.Items.FirstOrDefault(items => items.ItemId == id);
       return View(thisItem);
+    }
+
+    public ActionResult Delete(int id)
+    {
+      var thisItem = _db.Items.FirstOrDefault(items => items.ItemId == id);
+      return View(thisItem);
+    }
+
+    [HttpPost, ActionName("Delete")]
+    public ActionResult DeleteContact(int id)
+    {
+      var thisItem = _db.Items.FirstOrDefault(items => items.ItemId == id);
+      _db.Items.Remove(thisItem);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+
     }
 
     [HttpPost]
