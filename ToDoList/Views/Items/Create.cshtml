@@ -1,3 +1,5 @@
+@*
+
 @{
   Layout = "_Layout";
 }
@@ -6,7 +8,6 @@
 
 <h4>Add a new task</h4>
 
-
 @using (Html.BeginForm())
 {
     @Html.LabelFor(model => model.Description)
@@ -14,7 +15,9 @@
 
     @Html.LabelFor(model => model.Category)
     @Html.DropDownList("CategoryId")
-    
-    <input type="submit" value="Add new task" />
+
+    <input type="submit" value="Add new item" class="btn btn-default" />
 }
 <p>@Html.ActionLink("Show all items", "Index")</p>
+<p>@Html.ActionLink("Home Page","Index", "Home")
+*@
