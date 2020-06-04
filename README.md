@@ -110,7 +110,7 @@ Please contact me with any suggestions or questions at cronkbrevin98@gmail.com T
 | **User can click on categories to view their details and items** | User Input:"Click:Chores" | Output: “Dishes, Walk the Dog” |
 | **If no items have been added a message appears** | User Input:"Click: View Items " | Output: “You have no items listed.” |
 | **User can navigate to a create new items page for each category** | User Input:"Click: Chores Click: Add Item" | Output: “Item Form" |
-| **Usercan add a new item for each category** | User Input:"Description: Do Dishes | Output: “Chores: Do Dishes” |
+| **User can add a new item for each category** | User Input:"Description: Do Dishes | Output: “Chores: Do Dishes” |
 | **User can delete a Category** | User Input:"Click: Delete Category" | Output: “You have removed this Category!” |
 | **User can delete a Item** | User Input:"Click: Delete item" | Output: “You have removed this item!” |
 
