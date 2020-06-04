@@ -64,7 +64,7 @@ dotnet run
 CREATE DATABASE `blockbuster`;
 
 USE `to_do_list`;
-w
+
 CREATE TABLE `items` (
   `ItemId` int(11) NOT NULL AUTO_INCREMENT,
   `Description` varchar(255) DEFAULT NULL,
