@@ -125,4 +125,4 @@ Microsoft Docs
 
 This software is licensed under the MIT license.
 
-Copyright © 2020 **Brevin Cronk_**
+Copyright © 2020 **_Brevin Cronk_**
